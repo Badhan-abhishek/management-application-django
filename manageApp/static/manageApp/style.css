@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oxygen+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* START: Home page banner Grid system and layout definitions */
+
+.page-container {
+  height: 100%;
+  margin: 0;
+}
+
+.content-wrap {
+  min-height: 100%;
+  margin-bottom: -50px;
+  padding-bottom: 50px;
+}
+
+.home-banner {
+  background-image: linear-gradient(to bottom right, skyblue, rgb(0, 84, 241));
+  background-repeat: no-repeat;
+  /* justify-content: center;
+  align-content: center; */
+}
+
+.grid-system {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.box1 {
+  justify-self: start;
+  align-self: start;
+  padding: 10px;
+}
+
+.box2 {
+  justify-self: end;
+  align-self: end;
+  padding: 10px;
+}
+
+.box2 ul {
+  display: grid;
+  grid-template-columns: 90px 100px 120px 1fr;
+  grid-template-rows: 1fr;
+  text-decoration: none;
+}
+
+.box2 ul li {
+  list-style: none;
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+}
+
+.box2 ul li a {
+  color: black;
+}
+
+.box3 {
+  display: grid;
+  height: 15vh;
+}
+
+.box3 h1 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  font-weight: 400;
+  align-self: center;
+  justify-self: center;
+}
+
+/* END: Home page banner Grid system and layout definitions */
+
+/* Footer */
+
+.footer-custom,
+.push {
+  height: 50px;
+  background-color: black;
+}
+
+/* START: Main body content starts from here */
+
+.content {
+  color: none;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.first-section-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  word-wrap: normal;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.second-section-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  word-wrap: normal;
+}
+
+.svgMain {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.svgMain:hover {
+  transform: scale(1.3);
+}
+
+.login-form {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.input-label {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: -3px;
+}
+
+.input-field {
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 5px;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.login-btn {
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 5px;
+}
+
+.login-btn:hover {
+  border: 2px solid green;
+  color: white;
+  background-color: black;
+}
+
+.register-btn {
+  width: 229px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  border: 2px solid green;
+  color: white;
+  background-color: black;
+}
+
+/* END: Main body content  */

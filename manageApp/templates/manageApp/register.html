@@ -1,0 +1,30 @@
+{% extends "manageApp/base.html" %} 
+{% block title%} Register {% endblock %} 
+
+{% block MainBodyContent %}
+
+<div class="row">
+    <div class="col-md-12 login-form">
+        <form method="POST" action="/auth/register/"> {% csrf_token %}
+            <label for="username" class="input-label">Username</label><br>
+            {{ form.username }}<br>
+
+            <label for="username" class="input-label">E-mail</label><br>
+            {{ form.email }}<br>
+
+            <label for="password" class="input-label">Password</label><br>
+            {{ form.password1 }}<br>
+
+            <label for="password" class="input-label">Repeat password</label><br>
+            {{ form.password2 }}<br>
+
+            <input type="submit" href="#" class="register-btn" name="Register">
+            {% for message in messages %}
+                <p style="color: red;">{{ message }}</p>
+            {% endfor %}
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}

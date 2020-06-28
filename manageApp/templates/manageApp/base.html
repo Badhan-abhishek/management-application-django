@@ -1,0 +1,101 @@
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  {% load static %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'manageApp/bootstrap.min.css' %}"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'manageApp/style.css' %}"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Holtwood+One+SC&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- Main content -->
+    <div class="content-wrap">
+      <div class="container-custom">
+        <!-- Banner -->
+        <div class="home-banner">
+          <div class="grid-system">
+            <div class="box1"><i class="fas fa-tasks fa-2x"></i></div>
+            <div class="box2">
+              <ul>
+                <li>
+                  <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button">
+                        <a href="{% url 'dashboard' %}">Dashboard</a>
+                      </button>
+                      <button class="dropdown-item" type="button">
+                        Contact Us
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  {% if request.user.is_authenticated %}
+                  <span style="color: green;">[{{ user.username }}]</span>
+                  <a href="{% url 'logout' %}">Log out</a>
+                  {% else %}
+                  <a href="{% url 'login' %}">Log in</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box3"><h1>{% block title %}{% endblock %}</h1></div>
+        </div>
+      </div>
+      <!-- Start main conteent from here -->
+      <div class="content">
+        {% block MainBodyContent %}{% endblock %}
+      </div>
+    </div>
+    <!-- Footer -->
+
+    <footer class="footer-custom"></footer>
+  </div>
+</body>
+
+<script src="{% static 'manageApp/js/popper.min.js' %}"></script>
+<script src="{% static 'manageApp/js/jquery-min.js' %}"></script>
+<script src="{% static 'manageApp/js/bootstrap.min.js' %}"></script>
+<script
+  src="https://kit.fontawesome.com/17bc9e4954.js"
+  crossorigin="anonymous"
+></script>

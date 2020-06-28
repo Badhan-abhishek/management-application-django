@@ -1,0 +1,5 @@
+.prettierignore
+managers/.env
+managers/post.cnf
+managers/__pycache__
+db.sqlite3

@@ -1,0 +1,28 @@
+{% extends "manageApp/base.html" %} 
+{% load static %} 
+{% block title %} LOG IN {% endblock %}
+
+
+{% block MainBodyContent %}
+
+<div class="row">
+    <div class="col-md-12 login-form">
+        <form method="POST"> {% csrf_token %}
+            <label for="username" class="input-label">Username</label><br>
+            <input type="text" name="username" class="input-field" required><br>
+
+            <label for="password" class="input-label">Password</label><br>
+            <input type="password" name="password" class="input-field" required><br>
+
+            <button type="submit" class="login-btn">Login</button><br>
+            
+        </form>
+        <a href="{% url 'register' %}" class="login-btn">or Register</a>
+        <br>
+        {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
