@@ -17,8 +17,9 @@
             <button type="submit" class="login-btn">Login</button><br>
             
         </form>
-        <a href="{% url 'register' %}" class="login-btn">or Register</a>
+        <a href="{% url 'register' %}" style="text-align: center;" class="login-btn">Register</a>
         <br>
+        <a href="{% url 'reset_password' %}" style="text-align: center;" class="login-btn">Forget Password</a>
         {% for message in messages %}
                 <p style="color: green;">{{ message }}</p>
         {% endfor %}

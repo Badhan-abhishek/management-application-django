@@ -24,8 +24,9 @@ ADD PERSON
     <label for="salary" class="input-label"></label>Salary<br>
     {{form.salary}}<br>
     <br>
-    <input class="btn btn-primary" type="submit" name="Add Person" />
+    <input class="btn btn-primary"  type="submit" name="Add Person" />
 </form>
+<a href="{% url 'dashboard' %}" class="btn btn-success">Cancel</a>
 </div></div>
 
 {% endblock %}

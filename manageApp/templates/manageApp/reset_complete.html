@@ -3,14 +3,11 @@ password {% endblock %} {% block MainBodyContent %}
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-8">
+    <h2>Password reset complete</h2>
     <p>
-      Change password here
+      Your password has been set. You may go ahead and
+      <a href="{% url 'login' %}">log in</a> now.
     </p>
-
-    <form method="POST">
-      {% csrf_token %} {{ form }}
-      <input class="btn btn-primary" type="submit" name="Send Email" />
-    </form>
   </div>
   <div class="col-md-2"></div>
 </div>

@@ -8,7 +8,7 @@
           {% endblock %}
           
           {% block MainBodyContent %}
-          <a href="{% url 'add_person' %}" class="btn btn-success">Add Person</a>
+          <a href="{% url 'add_person' %}" class="btn btn-success"><i class="fas fa-user-plus"></i> Add Person</a>
           {% for person in Persons %}
           <div class="container main-dashboard-content">
             <div class="about-section">
