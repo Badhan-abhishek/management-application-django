@@ -48,7 +48,7 @@
                 <li>
                   <div class="dropdown">
                     <button
-                      class="btn btn-primary dropdown-toggle"
+                      class="btn btn-primary dropdown-toggle dropdown-color"
                       type="button"
                       id="dropdownMenu2"
                       data-toggle="dropdown"
@@ -70,7 +70,9 @@
                 <li>
                   {% if request.user.is_authenticated %}
                   <span style="color: green;">[{{ user.username }}]</span>
-                  <a href="{% url 'logout' %}">Log out</a>
+                  <a href="{% url 'logout' %}"
+                    >Log out <i class="fas fa-sign-out-alt"></i
+                  ></a>
                   {% else %}
                   <a href="{% url 'login' %}">Log in</a>
                   {% endif %}
@@ -88,7 +90,13 @@
     </div>
     <!-- Footer -->
 
-    <footer class="footer-custom"></footer>
+    <footer class="footer-custom">
+      SVG from <a href="https://undraw.co/">unDraw.co</a> <br />
+      Icons from
+      <a href="https://fontawesome.com/"
+        ><i class="fab fa-font-awesome-alt"></i> Fontawesome.com</a
+      >
+    </footer>
   </div>
 </body>
 

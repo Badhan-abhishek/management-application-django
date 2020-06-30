@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oxygen+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Holtwood+One+SC&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #0f0e1c;
+  color: white;
 }
 
+.subtitle-style {
+  color: rgb(144, 136, 136);
+}
+
+.dropdown-color {
+  color: black;
+}
 /* START: Home page banner Grid system and layout definitions */
 
 .page-container {
@@ -66,6 +76,7 @@ body {
 .box3 {
   display: grid;
   height: 15vh;
+  color: black;
 }
 
 .box3 h1 {
@@ -90,6 +101,7 @@ body {
 
 .content {
   color: none;
+  height: auto;
 }
 
 .first-section {
@@ -181,3 +193,84 @@ body {
 }
 
 /* END: Main body content  */
+
+.dashboard-main {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.dashboard-box1 {
+  box-shadow: 10px 10px white;
+  height: 250px;
+  width: 400px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-box2 {
+  box-shadow: 10px 10px white;
+  height: 250px;
+  width: 400px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-dashboard-content {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 50px;
+  font-weight: 400;
+  color: black;
+  font-family: "Bree Serif";
+}
+.dashboard-subtitle {
+  font-size: 20px;
+  color: rgb(144, 136, 136);
+}
+.dashboard-result {
+  color: black;
+  font-size: 50px;
+}
+.about-section {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  padding: 10px;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.person-name {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 0.4fr;
+}
+.person-box-2 {
+  justify-self: flex-end;
+}
+.person-box-3 {
+  justify-self: flex-end;
+}
+.person-email {
+}
+.person-mobile {
+}
+/* .about-section:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    yellowgreen,
+    rgb(233, 230, 68)
+  );
+  color: #0f0e1c;
+} */

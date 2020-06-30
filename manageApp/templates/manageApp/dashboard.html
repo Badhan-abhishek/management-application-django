@@ -8,4 +8,57 @@
           {% endblock %}
           
           {% block MainBodyContent %}
+          <a href="{% url 'add_person' %}" class="btn btn-success">Add Person</a>
+          {% for person in Persons %}
+          <div class="container main-dashboard-content">
+            <div class="about-section">
+              <div class="person-name">
+                <div class="person-box-1">
+                  Name: {{person.name}}
+                </div>
+                <div class="person-box-2">
+                  <a href="{% url 'update_person' person.id %}" class="btn btn-success"><i class="fas fa-user-edit"></i> Edit info</a>
+                </div>
+                <div class="person-box-3">
+                  <a href="{% url 'delete' person.id %}" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</a>
+                </div>
+              </div>
+              <div class="person-email">Email: {{person.email_id}}</div>              
+              <div class="person-mobile">Mobile Number: {{person.mobile_number}}</div>
+            </div>
+            <div class="dashboard-main">
+
+              <div class="dashboard-box1">
+
+                <div class="dashboard-title">
+                  Attendance
+              </div>
+              <div class="dashboard-subtitle">
+                Number of days attended
+              </div>
+              <div class="dashboard-result">
+                {{person.days_attended}}
+              </div>
+
+              </div>
+
+              <div class="dashboard-box2">
+
+                <div class="dashboard-title">
+                  Salary
+              </div>
+              <div class="dashboard-subtitle">
+                Total output Salary
+              </div>
+              <div class="dashboard-result">
+                <i class="fas fa-rupee-sign"></i>{{person.salary}}
+              </div>
+
+              </div>
+
+            </div>
+            <hr>
+          </div>
+
+          {% endfor %}
           {% endblock %}

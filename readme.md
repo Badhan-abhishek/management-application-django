@@ -13,8 +13,9 @@ A web application build on Django 2.2.13, CSS and Bootstrap for templates and Po
 
 - Clone this repository by this command.
 
-  `clone`
+  `git clone https://github.com/Badhan-abhishek/management-application-django`
 
+- Open terminal or CMD in directory where **manage.py** exists.
 - Change SECRET_KEY & database password in **Settings.py**
 - Create a superuser with command `python3 manage.py createsuperuse`
 - Run migrations by following commands.
@@ -24,6 +25,11 @@ A web application build on Django 2.2.13, CSS and Bootstrap for templates and Po
 3.  `python3 manage.py migrate`
 
 - At last run server by following command `python3 manage.py runserver`
+
+> **NOTE :-** \
+>
+> - Windows user need to use `python manage.py [command]` \
+> - Application name is manageApp
 
 # Usage
 

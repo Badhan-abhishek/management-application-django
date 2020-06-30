@@ -1,0 +1,31 @@
+{% extends "manageApp/base.html" %} 
+
+{% load static %}
+
+{% block title %}
+ADD PERSON
+{% endblock %}
+
+{% block MainBodyContent %}
+<div class="row">
+    <div class="col-md-12 login-form">
+<form method="POST">
+    {% csrf_token %}
+    <label for="user" class="input-label">Select User</label><br>
+    {{form.user}}<br>
+    <label for="name" class="input-label">Name</label><br>
+    {{form.name}}<br>
+    <label for="email_id" class="input-label">Email ID</label><br>
+    {{form.email_id}}<br>
+    <label for="mobile_number" class="input-label">Mobile Number</label><br>
+    {{form.mobile_number}}<br>
+    <label for="days_attended" class="input-label">Days attended</label><br>
+    {{form.days_attended}}<br>
+    <label for="salary" class="input-label"></label>Salary<br>
+    {{form.salary}}<br>
+    <br>
+    <input class="btn btn-primary" type="submit" name="Add Person" />
+</form>
+</div></div>
+
+{% endblock %}

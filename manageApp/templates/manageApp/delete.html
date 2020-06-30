@@ -1,0 +1,10 @@
+{% extends "manageApp/base.html" %} {% load static %} {% block title %} DELETE
+PERSON {% endblock %} {% block MainBodyContent %}
+<p>Are you sure you want to delete {{item.name}}</p>
+<form action="{% url 'delete' item.id%}" method="POST">
+  {% csrf_token %}
+  <a href="{%url 'index' %}" class="btn btn-primary">Cancel</a>
+  <input type="submit" name="Yes" class="btn btn-danger" />
+</form>
+
+{% endblock %}
