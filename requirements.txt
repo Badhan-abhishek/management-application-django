@@ -1,7 +1,7 @@
 asgiref==3.2.8
 bson==0.5.8
 dataclasses==0.6
-Django==2.2.18
+Django==2.2.20
 psycopg2-binary==2.8.5
 pymongo==3.10.1
 python-dateutil==2.8.1
